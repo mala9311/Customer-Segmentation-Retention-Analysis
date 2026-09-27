@@ -3,8 +3,14 @@ import pandas as pd
 import numpy as np
 import joblib
 
-kmeans = joblib.load("kmeans_model.pkl")
-scaler = joblib.load("scaler.pkl")
+# kmeans = joblib.load("kmeans_model.pkl")
+# scaler = joblib.load("scaler.pkl")
+
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+kmeans = joblib.load(os.path.join(BASE_DIR, "kmeans_model.pkl"))
+scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
 
 st.title("customer Segmentation App")
 st.write("Enter customer details to predict the segment.")
