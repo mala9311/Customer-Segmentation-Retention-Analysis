@@ -10,7 +10,7 @@ st.title("customer Segmentation App")
 st.write("Enter customer details to predict the segment.")
 
 age = st.number_input("Age", min_value = 18, max_value = 100, value = 35)
-income =st.number_inpu("Income", min_value = 0, max_value = 200000, value= 50000)
+income =st.number_input("Income", min_value = 0, max_value = 200000, value= 50000)
 total_spending = st.number_input("Total Spending (sum of purchases)",min_value = 0, max_value= 5000, value= 1000)
 num_web_purchases =st.number_input("Number of Web Purchases", min_value= 0, max_value= 100, value = 10)
 num_store_purchases = st.number_input("Number of Store purchases",min_value = 0, ,max_value= 100, value = 10)
