@@ -1,16 +1,19 @@
-import streamlit as plt
+import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-
+import os
 # kmeans = joblib.load("kmeans_model.pkl")
 # scaler = joblib.load("scaler.pkl")
 
-import os
-
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+st.write("BASE_DIR is:", BASE_DIR)
+st.write("Files Streamlit sees:", os.listdir(BASE_DIR))
+
 kmeans = joblib.load(os.path.join(BASE_DIR, "kmeans_model.pkl"))
 scaler = joblib.load(os.path.join(BASE_DIR, "scaler.pkl"))
+
 
 st.title("customer Segmentation App")
 st.write("Enter customer details to predict the segment.")
